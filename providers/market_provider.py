@@ -1,20 +1,9 @@
-import pandas as pd
-
-from providers.tsetmc_client import TSETMCClient
+from providers.base_provider import BaseProvider
 
 
-class MarketProvider:
-
-    def __init__(self):
-
-        self.client = TSETMCClient()
+class MarketProvider(BaseProvider):
 
     def get_market_watch(self):
 
-        # فعلاً فقط تست اتصال
-        data = self.client.get("StaticData/GetTime")
-
-        print(data)
-
-        return pd.DataFrame()
+        return None
     
