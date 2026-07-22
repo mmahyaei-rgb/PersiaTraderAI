@@ -1,5 +1,8 @@
-from services.market_service import MarketService
+from application.market.market_engine import MarketEngine
 
-service = MarketService()
 
-service.sync_market()
+engine = MarketEngine()
+
+data = engine.update()
+
+print(data)
