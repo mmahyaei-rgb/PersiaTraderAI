@@ -1,15 +1,14 @@
-from analysis.indicators import Indicators
+from strategies.strategy_engine import StrategyEngine
 
 
 class Scanner:
 
-    def analyse(self, df):
+    @staticmethod
+    def scan(df):
 
-        df["EMA20"] = Indicators.ema(df["close"],20)
+        engine = StrategyEngine()
 
-        df["EMA50"] = Indicators.ema(df["close"],50)
+        signals = engine.analyze(df)
 
-        df["RSI"] = Indicators.rsi(df["close"])
-
-        return df
+        return signals
     
