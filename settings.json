@@ -1,0 +1,7 @@
+{
+    "database": "data/market.db",
+    "log_level": "INFO",
+    "update_interval": 60,
+    "max_symbols": 1000,
+    "market": "TSE"
+}

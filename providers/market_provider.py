@@ -1,29 +1,20 @@
 import pandas as pd
 
+from providers.tsetmc_client import TSETMCClient
+
 
 class MarketProvider:
 
-    def load_demo(self):
+    def __init__(self):
 
-        close = [
+        self.client = TSETMCClient()
 
-            100,102,103,101,104,
+    def get_market_watch(self):
 
-            106,107,109,108,111,
+        # فعلاً فقط تست اتصال
+        data = self.client.get("StaticData/GetTime")
 
-            112,114,116,118,119,
+        print(data)
 
-            120,121,123,124,125,
-
-            126,127,129,130,132,
-
-            133,135,136,138,140
-
-        ]
-
-        return pd.DataFrame({
-
-            "close":close
-
-        })
-        
+        return pd.DataFrame()
+    

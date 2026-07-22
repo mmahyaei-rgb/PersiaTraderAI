@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Database
+data/*.db
+
+# Logs
+logs/
+*.log
+
+# Virtual Environment
+venv/
+.venv/
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/

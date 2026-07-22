@@ -1,13 +1,10 @@
 import logging
-from pathlib import Path
-
-LOG_DIR = Path("logs")
-LOG_DIR.mkdir(exist_ok=True)
+from config import LOG_FILE
 
 logging.basicConfig(
-    filename=LOG_DIR / "persia_trader.log",
+    filename=LOG_FILE,
     level=logging.INFO,
     format="%(asctime)s | %(levelname)s | %(message)s"
 )
 
-logger = logging.getLogger("PersiaTrader")
+logger = logging.getLogger("PersiaTraderAI")
