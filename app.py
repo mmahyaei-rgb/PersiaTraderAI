@@ -4,4 +4,9 @@ engine = MarketEngine()
 
 df = engine.update()
 
-print(df.tail())
+print(df[[
+    "close",
+    "SMA20",
+    "EMA20",
+    "RSI14"
+]].tail())
