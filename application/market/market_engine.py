@@ -1,5 +1,7 @@
 from infrastructure.providers.provider_manager import ProviderManager
 
+from analysis.indicator_engine import IndicatorEngine
+
 
 class MarketEngine:
 
@@ -9,5 +11,9 @@ class MarketEngine:
 
     def update(self):
 
-        return self.provider.market()
+        df = self.provider.market()
+
+        df = IndicatorEngine.calculate(df)
+
+        return df
     
